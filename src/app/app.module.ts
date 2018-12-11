@@ -50,10 +50,18 @@ import { GestureConfig } from "@angular/material";
 import { ScrollingModule } from "@angular/cdk/scrolling";
 import { CdkTableModule } from "@angular/cdk/table";
 import { CdkTreeModule } from "@angular/cdk/tree";
-import { DatatableComponent } from './datatable/datatable.component';
+import { DatatableComponent } from "./datatable/datatable.component";
+import { FxComponent } from "./fx/fx.component";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
-  declarations: [AppComponent, CrearEmpleadoComponent, SliderComponent, DatatableComponent],
+  declarations: [
+    AppComponent,
+    CrearEmpleadoComponent,
+    SliderComponent,
+    DatatableComponent,
+    FxComponent
+  ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
@@ -99,7 +107,8 @@ import { DatatableComponent } from './datatable/datatable.component';
     MatTableModule,
     MatTabsModule,
     MatTooltipModule,
-    MatTreeModule
+    MatTreeModule,
+    HttpClientModule
   ],
   providers: [{ provide: HAMMER_GESTURE_CONFIG, useClass: GestureConfig }],
   bootstrap: [AppComponent]
