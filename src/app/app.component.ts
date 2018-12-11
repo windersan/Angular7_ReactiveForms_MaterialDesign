@@ -11,6 +11,7 @@ export class AppComponent {
   title = "travel";
   count: number = 0;
   blue: boolean = true;
+  lang: string = "English";
 
   changeColor() {
     this.blue = !this.blue;
