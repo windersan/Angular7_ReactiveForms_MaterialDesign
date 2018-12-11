@@ -12,20 +12,54 @@ import {
   MatListModule,
   MatFormFieldModule,
   MatSelectModule,
-  MatInputModule
+  MatInputModule,
+  MatCheckboxModule,
+  MatSliderModule,
+  MatAutocompleteModule,
+  MatBadgeModule,
+  MatBottomSheetModule,
+  MatButtonToggleModule,
+  MatChipsModule,
+  MatDatepickerModule,
+  MatDialogModule,
+  MatDividerModule,
+  MatExpansionModule,
+  MatGridListModule,
+  MatMenuModule,
+  MatNativeDateModule,
+  MatPaginatorModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
+  MatRadioModule,
+  MatRippleModule,
+  MatSlideToggleModule,
+  MatSnackBarModule,
+  MatSortModule,
+  MatStepperModule,
+  MatTableModule,
+  MatTabsModule,
+  MatTooltipModule,
+  MatTreeModule
 } from "@angular/material";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { CrearEmpleadoComponent } from "./empleado/crear-empleado.component";
+import { SliderComponent } from "./slider/slider.component";
+import { HAMMER_GESTURE_CONFIG } from "@angular/platform-browser";
+import { GestureConfig } from "@angular/material";
+import { ScrollingModule } from "@angular/cdk/scrolling";
+import { CdkTableModule } from "@angular/cdk/table";
+import { CdkTreeModule } from "@angular/cdk/tree";
+import { DatatableComponent } from './datatable/datatable.component';
 
 @NgModule({
-  declarations: [AppComponent, CrearEmpleadoComponent],
+  declarations: [AppComponent, CrearEmpleadoComponent, SliderComponent, DatatableComponent],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule,
     MatButtonModule,
     MatIconModule,
     MatCardModule,
@@ -35,9 +69,39 @@ import { CrearEmpleadoComponent } from "./empleado/crear-empleado.component";
     DragDropModule,
     MatFormFieldModule,
     MatSelectModule,
-    MatInputModule
+    MatInputModule,
+    MatCheckboxModule,
+    MatSliderModule,
+    ScrollingModule,
+    CdkTableModule,
+    CdkTreeModule,
+    MatAutocompleteModule,
+    MatBadgeModule,
+    MatBottomSheetModule,
+    MatButtonToggleModule,
+    MatChipsModule,
+    MatDatepickerModule,
+    MatDialogModule,
+    MatDividerModule,
+    MatExpansionModule,
+    MatGridListModule,
+    MatMenuModule,
+    MatNativeDateModule,
+    MatPaginatorModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatRadioModule,
+    MatRippleModule,
+    MatSlideToggleModule,
+    MatSnackBarModule,
+    MatSortModule,
+    MatStepperModule,
+    MatTableModule,
+    MatTabsModule,
+    MatTooltipModule,
+    MatTreeModule
   ],
-  providers: [],
+  providers: [{ provide: HAMMER_GESTURE_CONFIG, useClass: GestureConfig }],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
