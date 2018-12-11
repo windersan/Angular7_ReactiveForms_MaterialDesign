@@ -1,1 +1,1 @@
-http://salemiangular.azurewebsites.net/travel/
+http://salemiangular.azurewebsites.net/index.html
